@@ -1,0 +1,22 @@
+- Per avviare Hadoop:
+	1) eseguire da terminale: start-dfs.sh && start-yarn.sh
+	2) eseguire da terminale: jps
+        3) verificare che i demoni java relativi ad Hadoop siano in esecuzione. Esempio di output (formato: <PID> processo):
+		7449 DataNode
+		8037 NodeManager
+		7680 SecondaryNameNode
+		7280 NameNode
+		7902 ResourceManager
+	4) I comandi {yarn, hadoop, hdfs} sono disponibile per l'esecuzione
+
+- Le librerie Hadoop/MapReduce/HDFS sono disponibili al path ~/hadoop/share/hadoop/
+
+- Per terminare hadoop eseguire da terminale: stop-dfs.sh && stop-yarn.sh
+
+- Interfacce web dei demoni Hadoop:
+	ResourceManager:    http://localhost:8088
+	NameNode:           http://localhost:50070
+	Secondary NameNode: http://localhost:50090
+
+- Esecuzione MapReduce examples:
+	PI: yarn jar ~/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar pi 2 5
